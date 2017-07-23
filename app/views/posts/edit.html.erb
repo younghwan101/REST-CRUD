@@ -1,0 +1,11 @@
+<%= form_tag post_path(@post.id), method: 'patch' do %>
+    <%= text_field_tag 'tit le', @post.title %>
+    <%= text_area_tag 'content', @post.content %>
+    <%= submit_tag 'Submit!' %>
+<% end %>
+
+<%= form_for @post do |f| %>
+    <%= f.text_field 'title' %>
+    <%= f.text_area 'content' %>
+    <%= f.submit 'Submit!' %>
+<% end %>
